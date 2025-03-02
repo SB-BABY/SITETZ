@@ -1,0 +1,34 @@
+// помещаем утилитарные функции: container, visually-hidden
+.container {
+	max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+	margin-inline: auto;
+	padding-inline: var(--container-padding-x);
+	overflow: visible; 
+	position: relative;
+}
+
+.accent{
+	color: var(--color-accent);
+}
+
+.hr-content{
+	width: 100%;
+	height: 2px;
+	background: var(--color-accent-mega-light);
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+// спрячет элемент на мобильных устройствах
+.hidden-mobile {
+	@include mobile {
+		display: none !important;
+	}
+}
+// отобразит элемент на мобильных устройствах но скроит на диапазонах больше чем мобильные устройства
+.visible-mobile {
+	@include mobile-above {
+		display: none !important;
+	}
+}

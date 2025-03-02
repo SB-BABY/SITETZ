@@ -1,0 +1,66 @@
+.header {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+
+    &__content-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 18px;
+        height: 15px;
+        color: var(--color-yellow);
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
+
+    &__logo {
+        @include fluid-text(48, 36);
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 40px;
+    }
+
+    &__item {
+        cursor: pointer;
+        position: relative;
+        &-premium {
+            color: var(--color-yellow);
+            background: var(--color-accent-dark);
+            padding: 6px 13px;
+            border-radius: var(--border-radius);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 10px;
+        }
+
+        &::after {
+            content: ''; // Обязательно для псевдоэлемента
+            position: absolute;
+            left: 0;
+            bottom: -2px; // Отступ подчеркивания от текста
+            width: 0; // Начальная ширина подчеркивания
+            height: 2px; // Толщина подчеркивания
+            background-color: var(--color-yellow); // Цвет подчеркивания
+            transition: width 0.3s ease; // Анимация появления
+        }
+
+        &:not(:last-child):hover::after {
+            width: 100%; // Подчеркивание на всю ширину текста
+        }
+    }
+    
+}

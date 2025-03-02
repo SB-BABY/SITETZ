@@ -1,0 +1,31 @@
+.page {
+    display: flex;
+    column-gap: 30px;
+    margin-top: 30px;
+    overflow: visible;
+
+    &__sidebar {
+        flex: 0 0 270px; // Фиксированная ширина сайдбара
+    }
+
+    &__content {
+        flex: 1; // Основной контент занимает оставшееся пространство
+        min-width: 0; // Помогает избежать бага с растягиванием элементов в Slick Slider
+    }
+}
+
+.background-image {
+    background-image: url("../../img/body-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: -50%; // Выдвигаем изображение влево
+    right: -50%; // Выдвигаем изображение вправо
+    height: 100%;
+    z-index: -1;
+
+    @include tablet {
+        display: none; // Скрываем изображение на планшетах и мобильных устройствах
+    }
+}

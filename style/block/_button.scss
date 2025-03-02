@@ -1,0 +1,143 @@
+// BUTTON
+.button {
+	@include flex-center(true);
+
+	height: var(--button-height);
+	// padding-inline: 35px;
+	padding: 17px 25px;
+	font-size: 16px;
+	color: var(--color-gray);
+	background-color: var(--color-light);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	border-color: var(--color-light);
+	cursor: pointer;
+
+	@include hover {
+		color: var(--color-dark);
+		background-color: var(--color-yellow);
+		border-color: var(--color-yellow);
+	}
+
+	&--transparent {
+		color: var(--color-dark);
+		background-color: transparent;
+	}
+
+	&--accent {
+		color: var(--color-dark);
+		background-color: var(--color-accent);
+
+		@include hover {
+			color: var(--color-accent);
+			background-color: var(--color-dark);
+		}
+	}
+}
+// BUTTON
+
+// BUTTON YELLOW
+.button-yellow {
+	@include flex-center(true);
+
+	height: var(--button-height);
+	// padding-inline: 35px;
+	padding: 17px 25px;
+	font-size: 16px;
+	color: var(--color-dark);
+	background-color: var(--color-yellow);
+	border: var(--border);
+	border-radius: var(--border-radius);
+	border-color: var(--color-yellow);
+	cursor: pointer;
+
+	@include hover {
+		color: var(--color-dark);
+		background-color: var(--color-yellow-black);
+		border-color: var(--color-yellow-black);
+	}
+
+	&--transparent {
+		color: var(--color-dark);
+		background-color: transparent;
+	}
+
+	&--accent {
+		color: var(--color-dark);
+		background-color: var(--color-accent);
+
+		@include hover {
+			color: var(--color-accent);
+			background-color: var(--color-dark);
+		}
+	}
+}
+// BUTTON YELLOW
+
+// BUTTON PURPLE
+.button-purple {
+	@include flex-center(true);
+	padding: 5px 10px;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: var(--color-light);
+	background-color: var(--color-accent-dark);
+	border: var(--border);
+	border-radius: var(--border-radius-small);
+	border-color: var(--color-accent-dark);
+	cursor: pointer;
+
+	@include hover {
+		color: var(--color-dark);
+		background-color: var(--color-yellow);
+		border-color: var(--color-yellow);
+	}
+
+	&--transparent {
+		color: var(--color-dark);
+		background-color: transparent;
+	}
+
+	&--accent {
+		color: var(--color-dark);
+		background-color: var(--color-accent);
+
+		@include hover {
+			color: var(--color-accent);
+			background-color: var(--color-dark);
+		}
+	}
+}
+// BUTTON PURPLE
+
+
+
+// BURGER BUTTON
+.burger-button {
+	@include reset-button;
+	@include square(48px);
+	color: var(--color-light);
+
+	position: relative;
+	border-radius: var(--border-radius-small);
+
+	@include hover {
+		background-color: var(--color-light);
+		color: #fff;
+	}
+
+	&::after {
+		@include abs-center;
+
+		content: "";
+		width: 50%;
+		height: 2px;
+		background-color: var(--color-light);
+		border-radius: 5px;
+		box-shadow:
+			0 -8px,
+			0 8px;
+	}
+}
+// BURGER BUTTON
+

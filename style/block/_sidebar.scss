@@ -1,0 +1,52 @@
+.page__sidebar {
+    padding: 18px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--color-accent-ultra-light);
+    background: var(--color-accent-mega-light);
+
+    .sidebar__profile {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .profile__name {
+        @include fluid-text(16, 14);
+        margin-bottom: 5px;
+    }
+
+    .sidebar__list {
+        padding-top: 9px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+    }
+
+    .sidebar__item {
+        color: var(--color-accent);
+        @include fluid-text(16, 14);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+        padding: 12px;
+
+        &:hover {
+            background: var(--color-accent);
+            border-radius: var(--border-radius-small);
+            color: var(--color-light);
+            cursor: pointer;
+        }
+    }
+
+    .sidebar__icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .sidebar__link {
+        box-sizing: border-box;
+        color: var(--color-dark);
+    }
+}
